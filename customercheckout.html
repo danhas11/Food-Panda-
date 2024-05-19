@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Checkout</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Checkout</h1>
+        <h2>Order Summary</h2>
+        <p id="customerName">Name: John Doe</p>
+        <p id="customerEmail">Email: john@example.com</p>
+        <h3>Items Bought:</h3>
+        <ul id="checkoutItems">
+            <!-- Items will be dynamically added here -->
+        </ul>
+        <p>Total Amount: $<span id="totalAmount">0.00</span></p>
+        <p>Your order is on its way!</p>
+        <button id="returnToDashboardBtn">Return to Dashboard</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkoutItemsList = document.getElementById('checkoutItems');
+            const totalAmountSpan = document.getElementById('totalAmount');
+            const returnToDashboardBtn = document.getElementById('returnToDashboardBtn');
+
+            // Retrieve customer name and email from localStorage
+            const customerName = localStorage.getItem('customerName') || 'John Doe';
+            const customerEmail = localStorage.getItem('customerEmail') || 'john@example.com';
+
+            // Display customer name and email
+            document.getElementById('customerName').textContent = `Name: ${customerName}`;
+            document.getElementById('customerEmail').textContent = `Email: ${customerEmail}`;
+
+            // Retrieve cart items from localStorage
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            // Function to display items bought
+            function displayCheckoutItems() {
+                checkoutItemsList.innerHTML = '';
+                let totalAmount = 0;
+                cartItems.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.name} - $${item.price}`;
+                    checkoutItemsList.appendChild(li);
+                    totalAmount += item.price;
+                });
+                totalAmountSpan.textContent = totalAmount.toFixed(2);
+            }
+
+            displayCheckoutItems();
+
+            // Event listener for Return to Dashboard button
+            returnToDashboardBtn.addEventListener('click', function () {
+                window.location.href = 'customer-dashboard.html';
+            });
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Owner Dashboard</title>
+    <link rel="stylesheet" href="dashboardstyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Restaurant Dashboard</h1>
+        <div id="addDishForm">
+            <h2>Add New Dish</h2>
+            <input type="text" id="dishName" placeholder="Dish Name" required>
+            <input type="text" id="dishCategory" placeholder="Category" required>
+            <input type="number" id="dishPrice" placeholder="Price" required>
+            <input type="text" id="dishDescription" placeholder="Description" required>
+            <input type="text" id="dishImage" placeholder="Image URL" required>
+            <button id="addDishBtn">Add Dish</button>
+        </div>
+        <div id="menu">
+            <h2>Menu</h2>
+            <div id="menuList">
+                <!-- Menu items will be dynamically added here -->
+            </div>
+        </div>
+        <div id="categories">
+            <h2>Categories</h2>
+            <ul id="categoryList">
+                <!-- Categories will be dynamically added here -->
+            </ul>
+            <input type="text" id="categoryName" placeholder="Category Name" required>
+            <button id="addCategoryBtn">Add Category</button><br>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </div>
+
+    <script src="restaurant-dashboard.js"></script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Owner Dashboard</title>
+    <link rel="stylesheet" href="dashboardstyle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Restaurant Dashboard</h1>
+        <div id="addDishForm">
+            <h2>Add New Dish</h2>
+            <input type="text" id="dishName" placeholder="Dish Name" required>
+            <input type="text" id="dishCategory" placeholder="Category" required>
+            <input type="number" id="dishPrice" placeholder="Price" required>
+            <input type="text" id="dishDescription" placeholder="Description" required>
+            <input type="text" id="dishImage" placeholder="Image URL" required>
+            <button id="addDishBtn">Add Dish</button>
+        </div>
+        <div id="cart">
+            <h2>Cart</h2>
+            <div id="cartList">
+               
+            </div>
+            <button id="clearCartBtn">Clear Cart</button>
+            <button id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+        <div id="menu">
+            <h2>Menu</h2>
+            <div id="menuList">
+                
+            </div>
+        </div>
+        <div id="categories">
+            <h2>Categories</h2>
+            <ul id="categoryList">
+                
+            </ul>
+            <input type="text" id="categoryName" placeholder="Category Name" required>
+            <button id="addCategoryBtn">Add Category</button><br>
+            <button id="logoutBtn">Logout</button>
+        </div>
+    </div>
+
+    <script src="restaurant-dashboard.js"></script>
+</body>
+</html> -->
+

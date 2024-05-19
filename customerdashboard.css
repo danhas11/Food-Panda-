@@ -1,0 +1,67 @@
+/* Add this CSS code to customer-dashboard.style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(https://as1.ftcdn.net/v2/jpg/01/73/79/24/1000_F_173792412_niQmC25aUyWpDxAAM1Z9nKu3qYrEhoXK.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.2), 
+                -8px -8px 16px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="number"],
+button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

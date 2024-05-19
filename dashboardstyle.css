@@ -1,0 +1,199 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #444;
+}
+
+#menu, #addDishForm, #categories, #cart {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#menuList, #cartList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menuItemCard, .cartItemCard {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.menuItemCard img, .cartItemCard img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+input, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background: #5cb85c;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4cae4c;
+}
+/* Add this CSS code to dashboardstyle.css */
+
+/* body {
+    font-family: 'Arial', sans-serif;
+    background-image: url(https://as1.ftcdn.net/v2/jpg/01/73/79/24/1000_F_173792412_niQmC25aUyWpDxAAM1Z9nKu3qYrEhoXK.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.2), 
+                -8px -8px 16px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #fff
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="number"],
+button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.deleteBtn {
+    background-color: #dc3545;
+    color: #fff;
+} */
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #444;
+}
+
+#menu, #addDishForm, #categories {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#menuList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menuItemCard {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.menuItemCard img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+input, button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background: #5cb85c;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4cae4c;
+} */
+
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #444;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #5cb85c;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Checkout</h1>
+        <h2>Order Summary</h2>
+        <p>Name: <span id="userName"></span></p> 
+        <p>Email: <span id="userEmail"></span></p> 
+        <h3>Items Bought:</h3>
+        <ul id="checkoutItems">
+         
+        </ul>
+        <p><b>Total Amount:</b> $<span id="totalAmount">0.00</span></p>
+        <p>Your order is on its way!</p>
+        <button onclick="returnToDashboard()">Return to Dashboard</button>
+    </div>
+
+    <script>
+        function returnToDashboard() {
+            window.location.href = 'restaurant-dashboard.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkoutItemsList = document.getElementById('checkoutItems');
+            const userNameElement = document.getElementById('userName');
+            const userEmailElement = document.getElementById('userEmail');
+            const totalAmountElement = document.getElementById('totalAmount');
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const userData = JSON.parse(localStorage.getItem('userData'));
+            
+           
+            const userName = userData ? userData.name : "xyz";
+            const userEmail = userData ? userData.email : "xyz@example.com";
+
+            
+            userNameElement.textContent = userName;
+            userEmailElement.textContent = userEmail;
+
+            
+            function displayCheckoutItems() {
+                let totalAmount = 0;
+                checkoutItemsList.innerHTML = '';
+                cartItems.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.name} - $${item.price}`;
+                    checkoutItemsList.appendChild(li);
+                    totalAmount += parseFloat(item.price);
+                });
+                totalAmountElement.textContent = totalAmount.toFixed(2);
+            }
+
+            displayCheckoutItems();
+        });
+    </script>
+</body>
+</html>
+
+
+
+
